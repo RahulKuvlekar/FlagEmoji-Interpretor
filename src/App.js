@@ -56,27 +56,28 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Flag Emoji Interpretor</h1>
+      <h1>Flag Interpretor</h1>
       <input onChange={inputHandlerEvent} />
       <h2 style={{ padding: "1rem" }}>{userAns} </h2>
 
       <h2> Emoji We Know</h2>
-
-      {emojiList.map((item) => {
-        return (
-          <span
-            onClick={() => emojiClick(item)}
-            key={item}
-            style={{
-              fontSize: "xx-large",
-              padding: "0.7rem",
-              cursor: "pointer"
-            }}
-          >
-            {item}
-          </span>
-        );
-      })}
+      <div>
+        {emojiList.map((item) => {
+          return (
+            <span
+              onClick={() => emojiClick(item)}
+              key={item}
+              style={{
+                fontSize: "xx-large",
+                padding: "0.7rem",
+                cursor: "pointer"
+              }}
+            >
+              {item}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 }
